@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+    <title>Welcome to Kochan Delivery</title>
+    <style>
+        body {
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://t4.ftcdn.net/jpg/02/20/67/65/360_F_220676590_4zfuo3TKXbys7xkC4Nx0YYFcMzkCkHTf.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1e90ff; /* Blue */
+        }
+
+        .panelGroup {
+            text-align: justify;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        p ~ p {
+            margin-top: 10px;
+            text-indent: 20px;
+        }
+
+        .graphicImage1 {
+            height: 230px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            float: left; 
+            margin-right: 20px;
+        }
+        
+        .graphicImage2 {
+		    height: 200px;
+		    padding-left: 10px;
+		    padding-bottom: 10px;
+		    float: right;
+		    margin-left: 20px;
+		}
+         p:first-of-type { 
+            text-indent: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Welcome to Kochan Delivery</h2>
+    
+    <h:form>
+        <h:form>
+                    <label for="name">Username</label>
+                    <h:inputText id="username" required="true" styleClass="inputText" value="#{userservice.name}"/>
+
+                    <label for="password">Password</label>
+                    <h:inputSecret id="password" required="true" styleClass="inputText" value="#{userservice.password}"/>
+
+                    <h:commandButton value="Log In" action="#{userservice.login}" styleClass="commandButton"/>
+                </h:form>
+    </h:form>
+    
+</div>
+
+</body>
+</html>
